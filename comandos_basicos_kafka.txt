@@ -1,0 +1,5 @@
+#Entrar no container docker exec -it broker bash
+#Criar topico: kafka-topics --bootstrap-server localhost:9092 --topic teste_leo --create --partitions 3 --replication-factor 1
+#Criar produtor: kafka-console-producer --broker-list localhost:9092 --topic teste_leo
+#Criar grupo de consumidor: kafka-console-consumer --bootstrap-server localhost:9092 --topic teste_leo --group grupodoleo2
+#Resetar offset do grupo consumidor: kafka-consumer-groups --bootstrap-server localhost:9092 --group grupodoleo --reset-offsets --to-earliest --execute --topic teste_leo
